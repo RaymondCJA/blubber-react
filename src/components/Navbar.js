@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Link from "react-router-dom/Link";
+import Link from "react-router-dom/Link"; // index.js:1 Warning: Please use `require("react-router-dom").Link` instead of `require("react-router-dom/Link")`. Support for the latter will be removed in the next major release.
 
 // Material-UI stuff
 import AppBar from "@material-ui/core/AppBar";
