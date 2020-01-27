@@ -1,15 +1,15 @@
 import React, { Component } from "react";
+import { Grid } from "@material-ui/core";
 import axios from "axios";
-import Grid from "@material-ui/core/Grid";
 
 import Blub from '../components/Blub';
-class home extends Component {
+
+export class home extends Component {
   state = {
     blubs: null
   };
   componentDidMount() {
-    axios
-      .get('/blubs')
+    axios.get("/blubs")
       .then(res => {
         console.log(res.data);
         this.setState({
@@ -22,10 +22,10 @@ class home extends Component {
     let recentBlubsMarkup = this.state.blubs ? (
       this.state.blubs.map(blub => <Blub blub={blub}/>)
     ) : (
-      <p>loading please wait...</p>
+      <p>Loading...</p>
     );
     return (
-      <Grid container spacing={10}>
+      <Grid container spacing={16}>
         <Grid item sm={8} xs={12}>
           {recentBlubsMarkup}
         </Grid>
