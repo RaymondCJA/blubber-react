@@ -2,16 +2,16 @@ import React, { Component } from "react";
 import { Grid } from "@material-ui/core";
 import axios from "axios";
 
-import Blub from '../components/Blub';
+import Blub from "../components/Blub";
 
 export class home extends Component {
   state = {
     blubs: null
   };
   componentDidMount() {
-    axios.get("/blubs")
+    axios
+      .get("/blubs")
       .then(res => {
-        console.log(res.data);
         this.setState({
           blubs: res.data
         });
@@ -20,7 +20,7 @@ export class home extends Component {
   }
   render() {
     let recentBlubsMarkup = this.state.blubs ? (
-      this.state.blubs.map(blub => <Blub blub={blub}/>)
+      this.state.blubs.map(blub => <Blub key={blub.blubId} blub={blub} />)
     ) : (
       <p>Loading...</p>
     );

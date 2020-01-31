@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
-import Link from "react-router-dom/Link";
+import { Link } from "react-router-dom";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
 
 // MUI STUFF
 import Card from "@material-ui/core/Card";
@@ -24,6 +26,7 @@ const styles = {
 
 export class Blub extends Component {
   render() {
+    dayjs.extend(relativeTime);
     const {
       classes,
       blub: {
@@ -43,7 +46,7 @@ export class Blub extends Component {
           title="Profile Image"
           className={classes.image}
         />
-        <CardContent class={classes.content}>
+        <CardContent className={classes.content}>
           <Typography
             variant="h5"
             component={Link}
@@ -53,7 +56,7 @@ export class Blub extends Component {
             {userHandle}
           </Typography>
           <Typography variant="body2" color="textSecondary">
-            {createdAt}
+            {dayjs(createdAt).fromNow()}
           </Typography>
           <Typography variant="body1">{body}</Typography>
         </CardContent>
