@@ -1,1 +1,1 @@
-This project is for me to explore using react as a front end to a pre-existing backend, mainly guided through online research and tutorials.
+This project is a work in progress frontend for my social media app, blubber (https://github.com/RaymondCJA/blubber) where users are able to make posts and like/comment on other user's posts.
