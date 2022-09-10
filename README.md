@@ -5,7 +5,7 @@ Blubber is intended to be a clone of Twitter (with a limited subset of features)
 technologies together to build a full stack web application, and to also explore how state management in frontend (React Redux in this case) worked.
 
 This repo is the frontend of the app. I have built it mostly using React, Redux and Material-UI.
-The frontend repo of the app can be found at: https://github.com/RaymondCJA/blubber
+The backend repo of the app can be found at: https://github.com/RaymondCJA/blubber
 
 ## Installation
 
